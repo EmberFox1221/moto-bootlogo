@@ -15,8 +15,9 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Install dependencies
-      sudo pkg install libpng -y
-      run: make
+      run: 
+        sudo pkg install libpng -y
+        make
 
     - name: Run check
       run: make check
