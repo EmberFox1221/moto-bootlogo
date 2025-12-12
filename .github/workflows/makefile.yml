@@ -17,7 +17,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get install libpng-dev
-        # make
+        make
         
     - name: Run distcheck
       run: |
