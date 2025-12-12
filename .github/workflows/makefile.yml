@@ -16,7 +16,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt-get install libpng
+        sudo apt-get install libpng-dev
+        ln -s /usr/include/libpng/png.h /usr/include/png.h   
         make
         
     - name: Run distcheck
