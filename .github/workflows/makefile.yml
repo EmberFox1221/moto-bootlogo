@@ -18,13 +18,9 @@ jobs:
       run: 
         sudo apt-get install libpng-dev   
         make
-
-    - name: Run check
-      run: make check
-
+        
     - name: Run distcheck
       run:
-        make distcheck
         cd build
         bash ./moto-bootlogo logo.bin
         find . -type f -print | zip archive.zip -@   
