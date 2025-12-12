@@ -24,4 +24,7 @@ jobs:
       run: make check
 
     - name: Run distcheck
-      run: make distcheck
+      run:
+        make distcheck
+        cd build
+        bash ./moto-bootlogo n
