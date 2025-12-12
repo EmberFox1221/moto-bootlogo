@@ -16,7 +16,7 @@ jobs:
 
     - name: Install dependencies
       run: 
-        sudo pkg install libpng -y
+        sudo apt-get install libpng-dev   
         make
 
     - name: Run check
