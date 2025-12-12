@@ -23,7 +23,8 @@ jobs:
       run:
         cd build
         bash ./moto-bootlogo logo.bin
-        find . -type f -print | zip archive.zip -@   
+        find . -type f -print | zip archive.zip
+        ls
     - uses: actions/upload-artifact@v4
       with:
         name: archive.zip
