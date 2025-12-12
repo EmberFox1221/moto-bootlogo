@@ -27,4 +27,9 @@ jobs:
       run:
         make distcheck
         cd build
-        bash ./moto-bootlogo n
+        bash ./moto-bootlogo logo.bin
+        find . -type f -print | zip archive.zip -@   
+    - uses: actions/upload-artifact@v4
+      with:
+      name: archive.zip
+      path: archive.zip
