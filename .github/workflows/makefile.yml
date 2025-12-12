@@ -31,5 +31,5 @@ jobs:
         find . -type f -print | zip archive.zip -@   
     - uses: actions/upload-artifact@v4
       with:
-      name: archive.zip
-      path: archive.zip
+        name: archive.zip
+        path: archive.zip
